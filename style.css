@@ -1,51 +1,43 @@
-
-body
-{
-  background-color:#141019;
-  background: radial-gradient(at 50% -20%, #908392, #0d060e) fixed;
+body {
+  margin: 0;
 }
 
-
-#handboy
-{
-   animation: swing ease-in-out 1.3s infinite alternate;
-    transform-origin: 98% 98%;
-    transform-box: fill-box;
-    
+.frame {
+  background-color: #D6C6AD;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding-bottom: 62.25%;
+  width: 100%;
 }
 
-
-#girllight
-{
-   animation: swing ease-in-out 1.3s infinite alternate;
-    transform-origin: 0% 97%;
-    transform-box: fill-box;
+@media screen and (min-width: 1025px) {
+  .frame {
+    padding-bottom: 638px;
+  }
 }
 
-#hairgirl
-{
-    animation: swinghair ease-in-out 1.3s infinite alternate;
-   transform-origin: 60% 0%;
-    transform-box: fill-box;
-  
+.drop {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
-#zero
-{
-  transform-origin:bottom;
-  transform-box:fill-box;
-  
+.main {
+  position: relative;
+  width: 100%;
 }
 
-/*************swing************/
-@keyframes swing {
-    0% { transform: rotate(10deg); }
-    100% { transform: rotate(-10deg); }
+.picture {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
 }
 
-
-/*************swing hair************/
-@keyframes swinghair {
-    0% { transform: rotate(6deg); }
-    100% { transform: rotate(-6deg); }
+.overlay {
+  display: block;
+  height: inherit;
+  max-width: 1024px;
+  position: absolute;
+  width: 100%;
 }
